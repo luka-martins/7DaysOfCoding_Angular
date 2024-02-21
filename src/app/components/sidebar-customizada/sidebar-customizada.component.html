@@ -1,0 +1,16 @@
+<div class="sidebar-header">
+    <img src="/assets/logo-starwars-96.png">
+    <div class="header-text">
+        <h2>Explore o universo de Star Wars</h2>
+        <p>Para onde deseja ir?</p>
+    </div>
+</div>
+<mat-nav-list>
+    <a mat-list-item *ngFor="let item of menuItens()" >
+        <img src = {{item.icon}} matListItemIcon (click)="navegar(item.route)">
+        <span matListItemTitle (click)="navegar(item.route)">{{ item.label}}</span>
+    
+    </a>
+
+
+</mat-nav-list>

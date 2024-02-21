@@ -1,0 +1,22 @@
+mat-toolbar{
+    position: relative;
+    z-index: 100;
+    background-color: black;
+}
+
+button{
+    color: var(--amarelo);
+}
+
+mat-sidenav{
+    background-color: black;
+}
+
+mat-sidenav-content{
+    padding: 24px;
+    
+}
+
+mat-sidenav-container{
+    height: 100%;
+}
