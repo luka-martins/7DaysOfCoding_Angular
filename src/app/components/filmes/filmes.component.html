@@ -1,1 +1,37 @@
-<h1>Bem vindo a seção de filmes</h1>
+<div class="mat-elevation-z1">
+  <table mat-table [dataSource]="dataSource" matSort>
+
+  
+    <ng-container matColumnDef="titulo">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Titulo</th>
+      <td mat-cell *matCellDef="let film">{{ film.title }}</td>
+    </ng-container>
+
+   
+    <ng-container matColumnDef="diretor">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Diretor</th>
+      <td mat-cell *matCellDef="let film">{{ film.director }}</td>
+    </ng-container>
+
+    
+    <ng-container matColumnDef="produtor">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Produtor</th>
+      <td mat-cell *matCellDef="let film">{{ film.producer }}</td>
+    </ng-container>
+
+    
+    <ng-container matColumnDef="data_de_lancamento">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Data de lancamento</th>
+      <td mat-cell *matCellDef="let film">{{ film.release_date | date:'dd/MM/yyyy' }} </td>
+    </ng-container>
+
+    
+    <ng-container matColumnDef="texto_de_abertura">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Texto de abertura</th>
+      <td mat-cell *matCellDef="let film">{{ film.opening_crawl }}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table> 
+</div>
